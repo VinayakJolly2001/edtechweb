@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Institute</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* #logo{
+            position: relative;
+            right: 720px;
+            bottom: 22px;
+        } */
+        body {
+            font-family:"lexend";
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #e8f5e9;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .courses {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .course {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .course h3 {
+            margin: 10px 0;
+        }
+
+        .course p {
+            color: #555;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="{% static 'images/ICIT.png' %}" alt="logo" height="60px" width="60px" id="logo">
+        <h1>Welcome to ICIT Computer Center</h1>
+        <p>Here we make your dreams true.</p>
+    </header>
+
+    <nav>
+        <a href="{% url 'courses' %}" target="_blank">Courses</a>
+        <a href="{% url 'about_us' %}">About Us</a>
+        <a href="#footer1">Contact</a>
+    </nav>
+
+    <section class="hero">
+        <h1>Explore Our Top Courses</h1>
+        <p>Enhance your skills with industry-focused programs</p>
+    </section>
+
+    <section id="courses" class="courses">
+        <div class="course">
+            <h3>Programming</h3>
+            <p>Master coding languages like Python, Java, C, C++ and more.</p>
+        </div>
+        <div class="course">
+            <h3>Tally</h3>
+            <p>Become proficient in financial accounting and Tally ERP.</p>
+        </div>
+        <div class="course">
+            <h3>MS Office</h3>
+            <p>Learn essential office tools like Word, Excel, and PowerPoint.</p>
+        </div>
+        <div class="course">
+            <h3>FULL STACK WEB DEVELOPMENT</h3>
+            <p>Learn front-end tools like HTML, CSS and JS and backend frameworks like django in Python</p>
+        </div>
+    </section>
+
+    <footer id="footer1" class="footer">
+        <p><strong>ICIT Computer Center</strong></p>
+        <p>Address: SCO-4, First-Floor, SST Nagar, Patiala</p>
+        <p>Phone: 9888033418, 9780023418</p>
+        <p>Email: info@icitcomputercenter.com</p>
+        <p>&copy; 2024 ICIT Computer Center. All rights reserved.</p>
+    </footer>
+</body>
+</html>
